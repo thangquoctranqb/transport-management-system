@@ -1,0 +1,10 @@
+# dotfiles
+.*
+!.gitignore
+
+# folder local
+/data-files/*
+/python-env/*
+/odoo/
+!/data-files/dump/
+!/python-env/script

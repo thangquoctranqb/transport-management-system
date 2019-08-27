@@ -1,0 +1,12 @@
+# Create env
+virtualenv -p $(which python3) python-env
+
+# Active
+source python-env/bin/activate
+# or "workon python-env"
+
+# Install modules
+pip3 install -r config/requirements-py.txt
+
+# Exit
+deactivate
