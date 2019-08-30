@@ -37,9 +37,14 @@ Todo ...
 - Restore database:
 `psql`
 `CREATE DATABASE tms;`
-`psql --set ON_ERROR_STOP=on -U tms -d tms < data-files/dump/tmsdb-dump*;`
 
-See detail at "data-files/tmsdb-dump*"
+Includes filestore (recommended):
+ - Access to database manager: [Database Manager](http://127.0.0.1:8069/web/database/manager) (list_db = True on odoo.conf)
+ - Choose restore option: data-files/dump/tms_$TIME*.zip`
+
+Without filestore: `psql --set ON_ERROR_STOP=on -U tms -d tms < data-files/dump/tmsdb-dump_$TIME.sql`
+
+See detail at "data-files/dump/"
 
 ### 4. Run system
 Start: `./odoo-bin -c config/odoo.conf`

@@ -7,4 +7,5 @@
 /python-env/*
 /odoo/
 !/data-files/dump/
+!/data-files/filestore/
 !/python-env/script

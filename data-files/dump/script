@@ -3,8 +3,8 @@ psql && \du
 CREATE USER tms WITH SUPERUSER LOGIN PASSWORD 'tms';
 
 # Dump database
-$(dirname "$(which psql)")/pg_dump -O -U tms -d tms > data-files/dump/tmsdb-dump*
+$(dirname "$(which psql)")/pg_dump -O -U tms -d tms > data-files/dump/tmsdb-dump*.sql
 
 # Restore database
 $(dirname "$(which psql)")/pg_restore -d tms < data-files/dump/tmsdb-dump*
-psql --set ON_ERROR_STOP=on --username tms --dbname tms < data-files/dump/tmsdb-dump*;
+psql --set ON_ERROR_STOP=on -U tms -d tms < data-files/dump/tmsdb-dump*.sql

@@ -54,4 +54,4 @@ simplejson
 pandas
 # depends_web - web_widget_bokeh_chart
 bokeh==1.1.0
-
+phonenumbers
